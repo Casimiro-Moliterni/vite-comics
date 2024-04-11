@@ -95,7 +95,7 @@ export default {
                             color:#464646 ;
                             
                         }
-                       &.active ::before{
+                       &.active ::after{
                           content: '';
                           width: 100%;
                           position: absolute;
