@@ -94,7 +94,8 @@ export default {
                         align-items: center;
                         a{
                             color:#464646 ;
-                            
+                            text-transform: uppercase;
+                            font-weight: 500;
                         }
                        &.active ::before{
                           content: '';
@@ -109,7 +110,7 @@ export default {
                       &.active{
                         a{
                             color:$brand_primary;
-                            text-transform: uppercase;
+                            
                         }
                       }
                     }

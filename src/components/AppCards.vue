@@ -97,6 +97,10 @@ export default {
                <div class="row">
                    <cards :title="image.series" :image="image.thumb" v-for="image in images"></cards>
                </div>
+               
+         </div>
+         <div class="btn-contain">
+            <button >LOAD MORE</button>
          </div>
    </section>
 </template>
@@ -113,15 +117,30 @@ export default {
      .card-section{
       color: white;
       background-color: #1c1c1c;
-      padding-top:45px;
-      padding-bottom:15px ;
+
+     .btn-contain{
+      display: flex;
+      justify-content: center;
+      padding-bottom: 20px;
+       button{
+            background-color: $brand_primary ;
+            padding: 10px 60px;
+            text-align: center;
+            border: none;
+            color: white;
+            font-weight: 600;
+            font-family: inherit;
+          }
+     } 
+
         .row{
          width: 95%;
          height: 100%;
          display: flex;
          flex-wrap: wrap;
          justify-content: space-between;
-
+         padding-top:32px;
+      padding-bottom:15px ;
         }
      }
 
@@ -132,11 +151,11 @@ export default {
             background-color: $brand_primary ;
             padding: 10px 30px;
             font-size: 20px;
-            font-weight: 600;
+            font-weight: 700;
             position: absolute;
-            top:0;
+            top:-20px;
             left: 0;
-            display: none;
+            
           }
      }
 </style>

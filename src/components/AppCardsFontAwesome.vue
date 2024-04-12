@@ -89,6 +89,7 @@ section{
                         text-wrap: nowrap;
                         color: white;
                         font-family: inherit;
+                        text-transform: uppercase;
                     }
                  }
             }

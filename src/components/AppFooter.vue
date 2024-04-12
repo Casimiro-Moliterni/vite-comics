@@ -149,7 +149,8 @@
             border: 3px solid $brand_primary;
             color: white;
             padding: 15px 12px;
-            font-weight: 600;
+            font-weight: 700;
+            font-size: 20px;
             font-family: inherit;
            }
            .links-footer-bottom-contain{

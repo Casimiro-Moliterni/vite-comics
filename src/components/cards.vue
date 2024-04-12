@@ -33,6 +33,7 @@ export default {
         text-align: left;
         font-family: inherit;
         margin-top: 14px;
+        font-weight: 400;
         text-transform: uppercase;
     }
     
