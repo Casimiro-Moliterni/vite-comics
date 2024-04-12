@@ -19,6 +19,8 @@ export default {
     width: calc((100% / 6) - 12px);
     margin: 12px 0;
     padding: 10px;
+
+
      .img{
         width: 180px;
         height: 185px;
@@ -36,6 +38,7 @@ export default {
         font-weight: 400;
         text-transform: uppercase;
     }
-    
+    cursor: pointer;
  }
+
 </style>

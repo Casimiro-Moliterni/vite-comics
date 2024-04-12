@@ -126,6 +126,9 @@
               color: #959578;
              font-size: 13px;
             }
+            a:hover{
+              color:$brand_primary ;
+            }
             } 
            .p{
             padding-top: 15px;
@@ -162,7 +165,9 @@
                color:$brand_primary;
                padding-right: 18px;
              }
-
+            img{
+              cursor: pointer;
+            }
            }
          }
   }

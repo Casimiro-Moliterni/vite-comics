@@ -73,6 +73,7 @@ section{
              .col{
                  width: calc((100% / 5) - 35px);
                  flex: 0 0 auto;
+                 cursor: pointer;
                  .row-card{
                     display: flex;
                     align-items: center;

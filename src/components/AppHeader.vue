@@ -3,6 +3,7 @@ export default {
    name:'AppHeader',
    data(){
     return {
+        activeItem : 1,
        links:[
         {
             text:'characters',
@@ -46,6 +47,14 @@ export default {
         },
        ]
     }
+   },
+   methods:{
+    activeItemFunc(index){
+     this.activeItem= index;
+    },
+    activeBaseItem(){
+        this.activeItem = 1;
+    }
    }
 }
 </script>
@@ -58,8 +67,8 @@ export default {
             <img src="../assets/img/dc-logo.png" alt="">
             </div>
             <nav>
-                <ul>
-                    <li :class="{'active': link.active  }"  v-for="link in links" ><a href="#">{{ link.text }}</a></li>
+                <ul @mouseleave="activeBaseItem()">
+                    <li   @mouseenter="activeItemFunc(index)"   :class="{'active': index === activeItem }"  v-for="link,index in links" ><a href="#">{{ link.text }}</a></li>
                 </ul>
             </nav>
         </div>
