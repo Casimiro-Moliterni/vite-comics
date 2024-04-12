@@ -1,6 +1,32 @@
 <script>
  export default {
-    name:'AppFooter'
+    name:'AppFooter',
+    data(){
+      return{
+        images:[
+          {
+            img:'footer-facebook.png',
+          },
+          {
+            img:'footer-periscope.png',
+          },
+          {
+            img:'footer-pinterest.png',
+          },
+          {
+            img:'footer-twitter.png',
+          },
+          {
+            img:'footer-youtube.png'
+          },
+        ]
+      }
+    },
+    methods:{
+      getImageUrl(name) {
+                return new URL(`../assets/img/${name}`, import.meta.url).href;
+            }
+    }
  }
 </script>
 
@@ -55,10 +81,21 @@
             </div>
         </div>
     </div>
+    <div class="footer-bottom">
+      <div class="container">
+           <button >SIGN-UP-NOW!</button>
+           <div class="links-footer-bottom-contain">
+                <h2>FOLLW US</h2>
+                <img v-for="image in images" :src="getImageUrl(image.img)" alt="">
+           </div>
+      </div>
+    </div>
  </footer>
 </template>
 
 <style scoped lang="scss">
+@use '../style/partials/-variables' as *;
+
   .footer-top{
     background-image: url('../assets/img/footer-bg.jpg');
 
@@ -73,20 +110,21 @@
           display: flex;
           justify-content: space-between;
           flex-wrap: wrap;
-          padding: 35px 0;
+          padding-top: 35px ;
+          padding-bottom: 50px;
           text-wrap: nowrap;
           .col{
             width: calc((100% / 3) - 55px);
              h3{
               color: white;
-              margin-bottom: 18px;
+              margin-bottom: 16px;
              }
             li{
               margin-bottom: 7px;
               text-align: left;
               a{
               color: #959578;
-             font-size: 12px;
+             font-size: 13px;
             }
             } 
            .p{
@@ -96,5 +134,35 @@
 
          }
     }
+  }
+  .footer-bottom{
+      background-color: #303030;
+      padding: 30px 0;
+
+          .container{
+           display: flex;
+           align-items: center;
+
+           button{
+            border: none;
+            background-color: inherit;
+            border: 3px solid $brand_primary;
+            color: white;
+            padding: 15px 12px;
+            font-weight: 600;
+            font-family: inherit;
+           }
+           .links-footer-bottom-contain{
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap:15px ;
+             h2{
+               color:$brand_primary;
+               padding-right: 18px;
+             }
+
+           }
+         }
   }
 </style>
