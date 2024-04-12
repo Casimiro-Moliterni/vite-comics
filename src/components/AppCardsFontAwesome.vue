@@ -65,7 +65,7 @@ section{
         .row{
             display:flex ;
             justify-content: space-between;
-            max-width: 90%;
+            max-width: 92%;
             margin-left: - 35px;
             margin-right: - 35px;
             margin: 0 auto;
