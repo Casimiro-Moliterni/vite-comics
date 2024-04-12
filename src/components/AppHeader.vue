@@ -109,6 +109,7 @@ export default {
                       &.active{
                         a{
                             color:$brand_primary;
+                            text-transform: uppercase;
                         }
                       }
                     }
