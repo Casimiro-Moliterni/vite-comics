@@ -71,8 +71,6 @@ export default {
 @use '../style/partials/-variables' as *;
    .container {
         .row {
-           
-            padding: 15px 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -91,17 +89,20 @@ export default {
 
                     li {
                         position: relative;
+                        height: 120px;
+                        display: flex;
+                        align-items: center;
                         a{
                             color:#464646 ;
                             
                         }
-                       &.active ::after{
+                       &.active ::before{
                           content: '';
                           width: 100%;
                           position: absolute;
                           height: 4px;
-                          bottom: -50px;
-                          
+                          bottom: 0;  
+                          left: 0;  
                           background-color:$brand_primary ;
                           
                        }
